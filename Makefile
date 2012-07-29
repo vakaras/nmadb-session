@@ -1,4 +1,4 @@
-PACKAGES={package_name}
+PACKAGES=nmadb_session
 
 test:
 	bin/test $(PACKAGES) \
