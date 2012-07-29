@@ -26,4 +26,18 @@ class SessionAdmin(admin.ModelAdmin):
             )
 
 
+class LecturerAdmin(admin.ModelAdmin):
+    """ Administration for lecturer.
+    """
+
+    list_display = (
+            'id',
+            'human',
+            )
+
+    search_fields = (
+            'id',
+            )
+
 admin.site.register(models.Session, SessionAdmin)
+admin.site.register(models.Lecturer, LecturerAdmin)
