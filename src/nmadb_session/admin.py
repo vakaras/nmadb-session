@@ -26,18 +26,13 @@ class SessionAdmin(admin.ModelAdmin):
             )
 
 
-class LecturerAdmin(admin.ModelAdmin):
-    """ Administration for lecturer.
+class LecturerParticipationInlineAdmin(admin.TabularInline):
+    """ Administration for lecturer participation in session.
     """
 
-    list_display = (
-            'id',
-            'human',
-            )
-
-    search_fields = (
-            'id',
-            )
+    model = models.Lecturer.sessions.through
+    filter_horizontal = ('lectures',)
+    extra = 0
 
 
 class LecturerParticipationAdmin(admin.ModelAdmin):
@@ -53,6 +48,26 @@ class LecturerParticipationAdmin(admin.ModelAdmin):
 
     list_filter = (
             'session',
+            )
+
+    filter_horizontal = ('lectures',)
+
+
+class LecturerAdmin(admin.ModelAdmin):
+    """ Administration for lecturer.
+    """
+
+    list_display = (
+            'id',
+            'human',
+            )
+
+    search_fields = (
+            'id',
+            )
+
+    inlines = (
+            LecturerParticipationInlineAdmin,
             )
 
 
