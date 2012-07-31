@@ -100,11 +100,6 @@ class Lecturer(models.Model):
             help_text=_(u'Sessions in which he was.')
             )
 
-    lectures = models.ManyToManyField(
-            Lecture,
-            help_text=_(u'Lectures, he gave.')
-            )
-
 
 class LecturerParticipation(models.Model):
     """ Marker that lecturer was in session.
@@ -121,6 +116,11 @@ class LecturerParticipation(models.Model):
     rating = models.FloatField(
             blank=True,
             null=True,
+            )
+
+    lectures = models.ManyToManyField(
+            Lecture,
+            help_text=_(u'Lectures, he gave.')
             )
 
 
