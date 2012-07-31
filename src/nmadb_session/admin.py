@@ -39,5 +39,48 @@ class LecturerAdmin(admin.ModelAdmin):
             'id',
             )
 
+
+class LecturerParticipationAdmin(admin.ModelAdmin):
+    """ Administration for lecturer participation in session.
+    """
+
+    list_display = (
+            'id',
+            'lecturer',
+            'session',
+            'rating',
+            )
+
+    list_filter = (
+            'session',
+            )
+
+
+class LectureAdmin(admin.ModelAdmin):
+    """ Administration for lecture.
+    """
+
+    list_display = (
+            'id',
+            'session',
+            'title',
+            'duration',
+            'lecture_type',
+            )
+
+    list_filter = (
+            'session',
+            'lecture_type',
+            )
+
+    search_fields = (
+            'id',
+            'title',
+            )
+
+
 admin.site.register(models.Session, SessionAdmin)
 admin.site.register(models.Lecturer, LecturerAdmin)
+admin.site.register(
+        models.LecturerParticipation, LecturerParticipationAdmin)
+admin.site.register(models.Lecture, LectureAdmin)
