@@ -163,7 +163,6 @@ class SessionGroup(Group):
             null=True,
             )
 
-
     def __unicode__(self):
         return u'{0.section} {0.group_number}'.format(self)
 
