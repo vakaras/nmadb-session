@@ -150,6 +150,11 @@ class SessionGroup(Group):
             Section,
             )
 
+    group = models.OneToOneField(
+            Group,
+            parent_link=True,
+            )
+
     group_number = models.PositiveSmallIntegerField(
             )
 
