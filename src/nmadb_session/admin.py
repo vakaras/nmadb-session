@@ -94,8 +94,49 @@ class LectureAdmin(admin.ModelAdmin):
             )
 
 
+class GroupAdmin(admin.ModelAdmin):
+    """ Administration for group.
+    """
+
+    list_display = (
+            'id',
+            'session',
+            )
+
+    search_fields = (
+            'id',
+            )
+
+    filter_horizontal = ('academics', 'lectures',)
+
+class SessionGroupAdmin(admin.ModelAdmin):
+    """ Administration for session group.
+    """
+
+    list_display = (
+            'id',
+            'session',
+            'section',
+            'group_number',
+            )
+
+    list_filter = (
+            'section',
+            'group_number',
+            )
+
+    search_fields = (
+            'id',
+            'session__year',
+            'section__title',
+            )
+
+    filter_horizontal = ('academics', 'lectures',)
+
 admin.site.register(models.Session, SessionAdmin)
 admin.site.register(models.Lecturer, LecturerAdmin)
 admin.site.register(
         models.LecturerParticipation, LecturerParticipationAdmin)
 admin.site.register(models.Lecture, LectureAdmin)
+admin.site.register(models.Group, GroupAdmin)
+admin.site.register(models.SessionGroup, SessionGroupAdmin)
