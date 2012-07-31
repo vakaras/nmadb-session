@@ -105,6 +105,7 @@ class GroupAdmin(admin.ModelAdmin):
 
     search_fields = (
             'id',
+            'session__year',
             )
 
     filter_horizontal = ('academics', 'lectures',)
