@@ -40,7 +40,7 @@ class Session(models.Model):
         unique_together = ((u'year', u'session_type'),)
 
     def __unicode__(self):
-        return u'{0.year} {0.session_type}'.format(self)
+        return u'{0.year} {1}'.format(self, self.get_session_type_display())
 
 
 class Lecture(models.Model):
