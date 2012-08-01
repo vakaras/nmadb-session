@@ -110,6 +110,7 @@ class GroupAdmin(admin.ModelAdmin):
 
     filter_horizontal = ('academics', 'lectures',)
 
+
 class SessionGroupAdmin(admin.ModelAdmin):
     """ Administration for session group.
     """
