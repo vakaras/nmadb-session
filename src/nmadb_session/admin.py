@@ -2,9 +2,10 @@ from django.contrib import admin
 from django.utils.translation import ugettext as _
 
 from nmadb_session import models
+from nmadb_utils import admin as utils
 
 
-class SessionAdmin(admin.ModelAdmin):
+class SessionAdmin(utils.ModelAdmin):
     """ Administration for session.
     """
 
@@ -35,7 +36,7 @@ class LecturerParticipationInlineAdmin(admin.TabularInline):
     extra = 0
 
 
-class LecturerParticipationAdmin(admin.ModelAdmin):
+class LecturerParticipationAdmin(utils.ModelAdmin):
     """ Administration for lecturer participation in session.
     """
 
@@ -50,10 +51,40 @@ class LecturerParticipationAdmin(admin.ModelAdmin):
             'session',
             )
 
+    search_fields = (
+            'lecturer__first_name',
+            'lecturer__last_name',
+            'lecturer__old_last_name',
+            'session__year',
+            )
+
     filter_horizontal = ('lectures',)
 
 
-class LecturerAdmin(admin.ModelAdmin):
+class AcademicParticipationAdmin(utils.ModelAdmin):
+    """ Administration for academic participation in session.
+    """
+
+    list_display = (
+            'id',
+            'academic',
+            'session',
+            'payment',
+            )
+
+    list_filter = (
+            'session',
+            )
+
+    search_fields = (
+            'academic__first_name',
+            'academic__last_name',
+            'academic__old_last_name',
+            'session__year',
+            )
+
+
+class LecturerAdmin(utils.ModelAdmin):
     """ Administration for lecturer.
     """
 
@@ -64,6 +95,9 @@ class LecturerAdmin(admin.ModelAdmin):
 
     search_fields = (
             'id',
+            'human__first_name',
+            'human__last_name',
+            'human__old_last_name',
             )
 
     inlines = (
@@ -71,7 +105,7 @@ class LecturerAdmin(admin.ModelAdmin):
             )
 
 
-class LectureAdmin(admin.ModelAdmin):
+class LectureAdmin(utils.ModelAdmin):
     """ Administration for lecture.
     """
 
@@ -91,10 +125,11 @@ class LectureAdmin(admin.ModelAdmin):
     search_fields = (
             'id',
             'title',
+            'session__year',
             )
 
 
-class GroupAdmin(admin.ModelAdmin):
+class GroupAdmin(utils.ModelAdmin):
     """ Administration for group.
     """
 
@@ -111,7 +146,7 @@ class GroupAdmin(admin.ModelAdmin):
     filter_horizontal = ('academics', 'lectures',)
 
 
-class SessionGroupAdmin(admin.ModelAdmin):
+class SessionGroupAdmin(utils.ModelAdmin):
     """ Administration for session group.
     """
 
@@ -134,6 +169,7 @@ class SessionGroupAdmin(admin.ModelAdmin):
             )
 
     filter_horizontal = ('academics', 'lectures',)
+
 
 admin.site.register(models.Session, SessionAdmin)
 admin.site.register(models.Lecturer, LecturerAdmin)
