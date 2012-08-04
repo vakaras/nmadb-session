@@ -1,0 +1,187 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-08-04 16:13+0300\n"
+"PO-Revision-Date: 2012-08-04 16:14+0300\n"
+"Last-Translator: Vytautas Astrauskas <vastrauskas@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+
+#: models.py:13
+msgid "winter"
+msgstr "žiema"
+
+#: models.py:14
+msgid "spring"
+msgstr "pavasaris"
+
+#: models.py:15
+msgid "summer"
+msgstr "vasara"
+
+#: models.py:16
+msgid "autumn"
+msgstr "ruduo"
+
+#: models.py:20
+msgid "year"
+msgstr "metai"
+
+#: models.py:26
+#: models.py:82
+msgid "type"
+msgstr "tipas"
+
+#: models.py:30
+msgid "begin"
+msgstr "pradžia"
+
+#: models.py:34
+msgid "end"
+msgstr "pabaiga"
+
+#: models.py:40
+#: models.py:164
+msgid "academics"
+msgstr "akademikai"
+
+#: models.py:46
+#: models.py:66
+#: models.py:133
+#: models.py:159
+#: models.py:222
+msgid "session"
+msgstr "sesija"
+
+#: models.py:47
+#: models.py:113
+msgid "sessions"
+msgstr "sesijos"
+
+#: models.py:59
+msgid "Subject"
+msgstr "Dalykinė"
+
+#: models.py:60
+msgid "Personality education"
+msgstr "Asmenybės ugdymas"
+
+#: models.py:61
+msgid "Evening event"
+msgstr "Vakaro renginys"
+
+#: models.py:71
+msgid "title"
+msgstr "pavadinimas"
+
+#: models.py:75
+msgid "duration"
+msgstr "trukmė"
+
+#: models.py:76
+msgid "In academic hours."
+msgstr "Akademinėmis valandomis."
+
+#: models.py:87
+msgid "lecture"
+msgstr "paskaita"
+
+#: models.py:88
+#: models.py:144
+#: models.py:169
+msgid "lectures"
+msgstr "paskaitos"
+
+#: models.py:101
+msgid "human"
+msgstr "žmogus"
+
+#: models.py:107
+#: models.py:200
+msgid "comment"
+msgstr "komentaras"
+
+#: models.py:114
+msgid "Sessions in which he was."
+msgstr "Sesijos, kuriose jis buvo."
+
+#: models.py:118
+#: models.py:128
+msgid "lecturer"
+msgstr "dėstytojas"
+
+#: models.py:119
+msgid "lecturers"
+msgstr "dėstytojai"
+
+#: models.py:139
+msgid "rating"
+msgstr "įvertinimas"
+
+#: models.py:145
+msgid "Lectures, he gave."
+msgstr "Paskaitos, kurias jis skaitė."
+
+#: models.py:149
+msgid "lecturer participation"
+msgstr "dėstytojo dalyvavimas"
+
+#: models.py:150
+msgid "lecturers participations"
+msgstr "dėstytojų dalyvavimai"
+
+#: models.py:170
+msgid "Lectures, this group has listened."
+msgstr "Paskaitos, kurias ši grupė klausė."
+
+#: models.py:174
+#: models.py:190
+msgid "group"
+msgstr "grupė"
+
+#: models.py:175
+msgid "groups"
+msgstr "grupės"
+
+#: models.py:184
+msgid "section"
+msgstr "sekcija"
+
+#: models.py:194
+msgid "group number"
+msgstr "grupės numeris"
+
+#: models.py:207
+msgid "session group"
+msgstr "sesijos grupė"
+
+#: models.py:208
+msgid "sessions groups"
+msgstr "sesijų grupės"
+
+#: models.py:217
+msgid "academic"
+msgstr "akademikas"
+
+#: models.py:228
+msgid "payment"
+msgstr "mokestis"
+
+#: models.py:232
+msgid "academic participation"
+msgstr "akademiko dalyvavimas"
+
+#: models.py:233
+msgid "academics participations"
+msgstr "akademikų dalyvavimai"
+
