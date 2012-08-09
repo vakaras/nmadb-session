@@ -178,3 +178,5 @@ admin.site.register(
 admin.site.register(models.Lecture, LectureAdmin)
 admin.site.register(models.Group, GroupAdmin)
 admin.site.register(models.SessionGroup, SessionGroupAdmin)
+admin.site.register(
+        models.AcademicParticipation, AcademicParticipationAdmin)
