@@ -159,6 +159,12 @@ class Group(models.Model):
             verbose_name=_(u'session'),
             )
 
+    comment = models.TextField(
+            blank=True,
+            null=True,
+            verbose_name=_(u'comment'),
+            )
+
     academics = models.ManyToManyField(
             'AcademicParticipation',
             verbose_name=_(u'academics'),
@@ -192,12 +198,6 @@ class SessionGroup(Group):
 
     group_number = models.PositiveSmallIntegerField(
             verbose_name=_(u'group number'),
-            )
-
-    comment = models.TextField(
-            blank=True,
-            null=True,
-            verbose_name=_(u'comment'),
             )
 
     def __unicode__(self):

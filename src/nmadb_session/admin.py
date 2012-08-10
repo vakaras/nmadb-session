@@ -138,6 +138,10 @@ class GroupAdmin(utils.ModelAdmin):
             'session',
             )
 
+    list_filter = (
+            'session',
+            )
+
     search_fields = (
             'id',
             'session__year',
