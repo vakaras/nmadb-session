@@ -77,9 +77,9 @@ class AcademicParticipationAdmin(utils.ModelAdmin):
             )
 
     search_fields = (
-            'academic__first_name',
-            'academic__last_name',
-            'academic__old_last_name',
+            'academic__student__first_name',
+            'academic__student__last_name',
+            'academic__student__old_last_name',
             'session__year',
             )
 
