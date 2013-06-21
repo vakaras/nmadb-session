@@ -83,6 +83,10 @@ class AcademicParticipationAdmin(utils.ModelAdmin):
             'session__year',
             )
 
+    raw_id_fields = (
+            'academic',
+            )
+
 
 class LecturerAdmin(utils.ModelAdmin):
     """ Administration for lecturer.
